@@ -1,6 +1,6 @@
 Feature: Login Functionality
 
-  @valid
+  @test
   Scenario: Login with valid username and valid password
     # Given user is navigated to HRMS
     When user enter valid username
@@ -8,7 +8,7 @@ Feature: Login Functionality
     And user click on login button
     Then admin is successfully logged in
 
-  @smoke
+  @test
   Scenario: Login with valid username and invalid password
     #Given user navigated to HRMS
     When user enters valid username
@@ -16,7 +16,7 @@ Feature: Login Functionality
     And clicks on login button
     Then user see “Invalid credentials” error message
 
-  @smoke
+  @test
   Scenario: Login with valid username and without password
     #Given user navigated to HRMS
     When user enters valid username

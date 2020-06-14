@@ -1,426 +1,86 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddEmployee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Dashbord.feature");
 formatter.feature({
-  "name": "Add new Employee",
+  "name": "Dashboard",
   "description": "",
   "keyword": "Feature"
 });
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "user is logged with valid admin credentials",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates to AddEmployeePage",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
 formatter.scenario({
-  "name": "Add Employee without employee id",
+  "name": "Dashboard menu view for admin",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@regression"
+      "name": "@test"
     }
   ]
 });
-formatter.step({
-  "name": "user enters employees \"Johnatan\" and \"Smithwhite\"",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user deletes employee id",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "\"Johnatan Smithwhite\" is added successfully",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
   "name": "user is logged with valid admin credentials",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates to AddEmployeePage",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "name": "AddEmployee and create Login Credentials",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@regression"
-    }
-  ]
-});
-formatter.step({
-  "name": "user enters employees \"Johnatan\" and \"Smithwhite\"",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.SearchEmployeeSteps.user_is_logged_with_valid_admin_credentials()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create login checkbox",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user enters login credentials",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "\"Johnatan Smithwhite\" is added successfully",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenarioOutline({
-  "name": "Adding multiple employees",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@regression"
-    }
-  ]
-});
-formatter.step({
-  "name": "user enter employees \"\u003cFirstName\u003e\", \"\u003cMiddleName\u003e\" and \"\u003cLastName\u003e\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "\"\u003cFirstName\u003e\", \"\u003cMiddleName\u003e\" and \"\u003cLastName\u003e\" is added successfully",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
+  "name": "user see dashboard menu is displayed",
   "rows": [
-    {
-      "cells": [
-        "FirstName",
-        "MiddleName",
-        "LastName"
-      ]
-    },
-    {
-      "cells": [
-        "James",
-        "J",
-        "Smith"
-      ]
-    },
-    {
-      "cells": [
-        "Faisal",
-        "F",
-        "Sakhi"
-      ]
-    },
-    {
-      "cells": [
-        "Sohil",
-        "S",
-        "Instuctor"
-      ]
-    },
-    {
-      "cells": [
-        "Yunus",
-        "Emre",
-        "Yakut"
-      ]
-    }
-  ]
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "user is logged with valid admin credentials",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates to AddEmployeePage",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "name": "Adding multiple employees",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@regression"
-    }
-  ]
-});
-formatter.step({
-  "name": "user enter employees \"James\", \"J\" and \"Smith\"",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "\"James\", \"J\" and \"Smith\" is added successfully",
+    {}
+  ],
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "com.hrms.steps.DashboardSteps.user_see_dashboard_menu_is_displayed(io.cucumber.datatable.DataTable)"
 });
-formatter.background({
-  "name": "",
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png", "Dashboard menu view for admin");
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/resources/features/DatatableTest.feature");
+formatter.feature({
+  "name": "Data Table Test",
   "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "user is logged with valid admin credentials",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates to AddEmployeePage",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+  "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Adding multiple employees",
+  "name": "Login with invalid credentials",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@regression"
+      "name": "@test"
     }
   ]
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
-  "name": "user enter employees \"Faisal\", \"F\" and \"Sakhi\"",
+  "name": "user enter invalid username and password and see error message",
+  "rows": [
+    {},
+    {},
+    {}
+  ],
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.InvalidLoginSteps.user_enter_invalid_username_and_password_and_see_error_message(io.cucumber.datatable.DataTable)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "\"Faisal\", \"F\" and \"Sakhi\" is added successfully",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "user is logged with valid admin credentials",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates to AddEmployeePage",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "name": "Adding multiple employees",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@regression"
-    }
-  ]
-});
-formatter.step({
-  "name": "user enter employees \"Sohil\", \"S\" and \"Instuctor\"",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "\"Sohil\", \"S\" and \"Instuctor\" is added successfully",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "user is logged with valid admin credentials",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates to AddEmployeePage",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "name": "Adding multiple employees",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@regression"
-    }
-  ]
-});
-formatter.step({
-  "name": "user enter employees \"Yunus\", \"Emre\" and \"Yakut\"",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "\"Yunus\", \"Emre\" and \"Yakut\" is added successfully",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.embedding("image/png", "embedded1.png", "Login with invalid credentials");
+formatter.after({
+  "status": "passed"
 });
 formatter.uri("file:src/test/resources/features/Login.feature");
 formatter.feature({
@@ -429,106 +89,174 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Login with empty username and valid password",
+  "name": "Login with valid username and valid password",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@regression"
+      "name": "@test"
     }
   ]
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
-  "name": "user enters empty username",
+  "name": "user enter valid username",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_enter_valid_username()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user enters empty password",
+  "name": "user enter valid password",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_enter_valid_password()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.step({
+  "name": "user click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_click_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "admin is successfully logged in",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.admin_is_successfully_logged_in()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded2.png", "Login with valid username and valid password");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Login with valid username and invalid password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@test"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters valid username",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_enters_valid_username()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters invalid password",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_enters_invalid_password()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.step({
   "name": "clicks on login button",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.clicks_on_login_button()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user see “Username cannot be empty” error message",
+  "name": "user see “Invalid credentials” error message",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_see_Invalid_credentials_error_message()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
-formatter.uri("file:src/test/resources/features/SearchEmployee.feature");
-formatter.feature({
-  "name": "Employee Search",
-  "description": "",
-  "keyword": "Feature"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.step({
-  "name": "user is logged with valid admin credentials",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user navigates Employee list page",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.embedding("image/png", "embedded3.png", "Login with valid username and invalid password");
+formatter.after({
+  "status": "passed"
 });
 formatter.scenario({
-  "name": "Search employee by name",
+  "name": "Login with valid username and without password",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@regression"
+      "name": "@test"
     }
   ]
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
-  "name": "user enters valid employee name and lastname",
+  "name": "user enters valid username",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_enters_valid_username()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "clicks on search button",
+  "name": "user enters empty password",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_enters_empty_password()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user see employee informatin is displayed",
+  "name": "clicks on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.clicks_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user see “Password cannot be empty” error message",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.hrms.steps.LoginSteps.user_see_Password_cannot_be_empty_error_message()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded4.png", "Login with valid username and without password");
+formatter.after({
+  "status": "passed"
 });
 });

@@ -88,8 +88,8 @@ public class ExcelUtility {
 			 map=new LinkedHashMap<>();
 			
 			for (int j = 0; j <cellSize; j++) {
-				String key=sheet.getRow(0).getCell(j).toString();
-				String value=sheet.getRow(i).getCell(j).toString();
+				String key=cellData(0, j);
+				String value=cellData(i, j);
 				
 				map.put(key, value);
 				

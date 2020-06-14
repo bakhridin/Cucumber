@@ -302,7 +302,9 @@ public static TakesScreenshot createObjectScreenShot() {
 	
 }
 
-public static String takeScreenshots(String filePath) {
+public static byte[] takeScreenshots(String filePath) {
+	
+	byte[] pic = createObjectScreenShot().getScreenshotAs(OutputType.BYTES);
 	
 	File file=createObjectScreenShot().getScreenshotAs(OutputType.FILE);
 	String destinationFile=Constans.SCREENSHOT_FILEPATH+filePath+getTimeStemp()+".png";
@@ -313,7 +315,7 @@ public static String takeScreenshots(String filePath) {
 		e.printStackTrace();
 	}
 	
-	return destinationFile;
+	return pic;
 }
 
 

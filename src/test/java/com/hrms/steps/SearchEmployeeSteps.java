@@ -27,7 +27,7 @@ public class SearchEmployeeSteps extends CommonMethods {
 
 	@When("user enters valid employee id")
 	public void user_enters_valid_employee_id() {
-	   sendText(employeeListPage.empId, "12109");
+	   sendText(employeeListPage.empId, "12746");
 	}
 
 	@When("clicks on search button")
@@ -38,7 +38,7 @@ public class SearchEmployeeSteps extends CommonMethods {
 	@Then("user see employee informatin is displayed")
 	public void user_see_employee_informatin_is_displayed() {
 	   String expected=employeeListPage.Id.getText();
-	   String actual="12109";
+	   String actual="12746";
 	   Assert.assertEquals("Text is not displayed", expected, actual);
 
 	}

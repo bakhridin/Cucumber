@@ -1,7 +1,6 @@
 package com.hrms.steps;
 
 import java.util.List;
-
 import java.util.Map;
 
 import org.junit.Assert;
@@ -33,6 +32,7 @@ public class AddEmployeeSteps extends CommonMethods {
 	@Then("{string} is added successfully")
 	public void employee_is_added_successfully(String expectedName) {
 		String actual = pdetails.profilePic.getText();
+	
 		Assert.assertEquals(expectedName, actual);
 		
 	}
@@ -77,6 +77,7 @@ public class AddEmployeeSteps extends CommonMethods {
 			sendText(employeeAddPage.middleName, mname);
 			sendText(employeeAddPage.lastName, lname);
 			click(employeeAddPage.saveButton);
+			sleep(1);
 			//adding assertion
 			
 			String actual=pdetails.profilePic.getText();
@@ -96,6 +97,23 @@ public class AddEmployeeSteps extends CommonMethods {
 	public void user_enters_employee_data_from_excel_sheet_then_employee_is_added(String sheetName) {
 	
 		List<Map<String,String>>excelList=ExcelUtility.getDataFromListOfMaps(Constans.TESTDATA_FILEPATH, sheetName);
+		
+		for (Map<String, String> data : excelList) {
+			String fname = data.get("FirstName");
+			String mname = data.get("MiddleName");
+			String lname = data.get("LastName");
+
+			sendText(employeeAddPage.firstName, fname);
+			sendText(employeeAddPage.middleName, mname);
+			sendText(employeeAddPage.lastName, lname);
+			click(employeeAddPage.saveButton);
+
+			String actual = pdetails.profilePic.getText();
+			String expected = fname + " " + mname + " " + lname;
+			Assert.assertEquals("Employee is not addedd successfully", expected, actual);
+			jsClick(dashboard.addEmp);
+
+		}
 		
 	}
 	

@@ -17,10 +17,12 @@ import io.cucumber.junit.CucumberOptions;
 		,monochrome=true
 		
 		,strict=true
-		,tags="@regression"
+		,tags="@test"
 		,plugin= {
 				"pretty"
 				,"html:target/cucumber-default-report"
+				,"json:target/cucumber.json"
+				,"rerun:target/failed.txt"
 				
 		          }
 		
